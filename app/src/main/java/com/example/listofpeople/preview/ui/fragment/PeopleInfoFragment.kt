@@ -20,8 +20,8 @@ class PeopleInfoFragment : Fragment() {
 
     private val options = RequestOptions()
         .diskCacheStrategy(DiskCacheStrategy.ALL)
-        .placeholder(R.mipmap.ic_launcher)
-        .error(R.mipmap.ic_launcher)
+        .placeholder(R.drawable.ic_avatar_1577909)
+        .error(R.drawable.ic_avatar_1577909)
         .priority(Priority.HIGH)
 
     private val viewModel: PeopleInfoViewModel by lazy {
