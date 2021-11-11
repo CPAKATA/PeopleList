@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    compileSdk versions.compileSdk
+
+    defaultConfig {
+        applicationId "com.example.listofpeople"
+        minSdk versions.minSdk
+        targetSdk versions.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+
+    implementation libs.core.core
+    implementation libs.core.appCompat
+    implementation libs.core.material
+
+    implementation libs.navigation.navigation_ktx
+    implementation libs.navigation.navigation_ktx_ui
+    implementation libs.navigation.dynamicFeatures
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation libs.lifecycle.lifecycle
+    implementation libs.lifecycle.lifecycle_ktx
+
+    implementation libs.network.retrofit
+    implementation libs.network.gson_converter
+
+    implementation libs.coroutines.coroutines
+
+    implementation libs.room.room
+    kapt libs.room.room_proc
+    implementation libs.room.room_ktx
+
+    implementation libs.glide.glide
+    kapt libs.glide.glide_kapt
+
+    implementation libs.multidex.multidex
+
+    implementation libs.swipe.swipe
+
+    testImplementation libs.mockito.mockito
+
+    testImplementation 'junit:junit:4.+'
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="userItem"
+            type="com.example.listofpeople.data.User"/>
+    </data>
+
+<LinearLayout
+    android:layout_marginTop="@dimen/size_20dp"
+    android:background="@drawable/border"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_100dp"
+    android:paddingVertical="@dimen/size_20dp"
+    android:orientation="horizontal">
+
+
+
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_marginStart="@dimen/size_20dp"
+        android:layout_width="@dimen/size_60dp"
+        android:layout_height="@dimen/size_60dp"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:src="@mipmap/ic_launcher">
+    </ImageView>
+
+    <TextView
+        android:layout_marginStart="@dimen/size_20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{userItem.name}"
+        style="@style/CustomText"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:textSize="15sp">
+    </TextView>
+
+</LinearLayout>
+
+</layout>

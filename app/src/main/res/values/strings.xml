@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ListOfPeople</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info_update">Обновить</string>
+    <string name="info_delete">Удалить</string>
+    <string name="update_update">Обновить</string>
+    <string name="update_name">Имя</string>
+    <string name="update_surname">Фамилия</string>
+    <string name="update_email">Email</string>
+</resources>

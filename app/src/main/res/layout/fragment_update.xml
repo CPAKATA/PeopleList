@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="preview.ui.fragment.PeopleInfoFragment">
+
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_width="@dimen/size_150dp"
+        android:layout_height="@dimen/size_150dp"
+        android:src="@mipmap/ic_launcher">
+    </ImageView>
+
+    <EditText
+        style="@style/CustomEditText"
+        android:id="@+id/et_name"
+        android:layout_marginTop="@dimen/size_60dp"
+        android:hint="@string/update_name"
+        android:autofillHints="name"
+        android:inputType="textPersonName">
+    </EditText>
+
+    <EditText
+        style="@style/CustomEditText"
+        android:id="@+id/et_surname"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:hint="@string/update_surname"
+        android:autofillHints="surname"
+        android:inputType="textPersonName">
+    </EditText>
+
+    <EditText
+        style="@style/CustomEditText"
+        android:id="@+id/et_email"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:hint="@string/update_email"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_60dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/CustomButton"
+            android:text="@string/update_update">
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
